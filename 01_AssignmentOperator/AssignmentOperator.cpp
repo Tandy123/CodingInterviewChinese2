@@ -59,19 +59,50 @@ CMyString::~CMyString()
 {
     delete[] m_pData;
 }
+//这个代码没有考虑安全性，new的时候可能由于内存不足二抛出异常
+//CMyString& CMyString::operator = (const CMyString& str)
+//{
+//    if(this == &str)
+//        return *this;
+//
+//    delete []m_pData;
+//    m_pData = nullptr;
+//
+//    m_pData = new char[strlen(str.m_pData) + 1];
+//    strcpy(m_pData, str.m_pData);
+//
+//    return *this;
+//}
 
-CMyString& CMyString::operator = (const CMyString& str)
+//改进方法一：先分配空间再释放原来的内容
+//CMyString& CMyString::operator = (const CMyString& str)
+//{
+//    if(this == &str)
+//        return *this;
+//
+//	char* m_pData_temp = new char[strlen(str.m_pData) + 1];
+//
+//    delete []m_pData;
+//    m_pData = nullptr;
+//	m_pData = m_pData_temp;
+//
+//    strcpy(m_pData, str.m_pData);
+//
+//    return *this;
+//}
+
+//改进方法二：先分配空间再释放原来的内容
+CMyString& CMyString::operator = (const CMyString& str) 
 {
-    if(this == &str)
-        return *this;
+	if(this != &str)
+	{
+		CMyString strTemp(str);
 
-    delete []m_pData;
-    m_pData = nullptr;
-
-    m_pData = new char[strlen(str.m_pData) + 1];
-    strcpy(m_pData, str.m_pData);
-
-    return *this;
+		char *pTemp = strTemp.m_pData;
+		strTemp.m_pData = m_pData;
+		m_pData = pTemp;
+	}
+	return *this;
 }
 
 // ====================测试代码====================
