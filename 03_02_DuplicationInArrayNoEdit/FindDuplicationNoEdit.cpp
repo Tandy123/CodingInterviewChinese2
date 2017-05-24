@@ -37,7 +37,8 @@ int getDuplication(const int* numbers, int length)
     int end = length - 1;
     while(end >= start)
     {
-        int middle = ((end - start) >> 1) + start;
+       int middle = ((end - start) >> 1) + start;
+		//int middle = (end + start) / 2;
         int count = countRange(numbers, length, start, middle);
         if(end == start)
         {
@@ -149,8 +150,8 @@ void test8()
 // 没有重复的数字
 void test9()
 {
-    int numbers[] = { 1, 2, 6, 4, 5, 3 };
-    int duplications[] = { -1 };
+    int numbers[] = { 2, 2, 6, 4, 5, 3 };
+    int duplications[] = { 2 };
     test("test9", numbers, sizeof(numbers) / sizeof(int), duplications, sizeof(duplications) / sizeof(int));
 }
 

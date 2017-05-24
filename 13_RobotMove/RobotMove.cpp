@@ -49,11 +49,8 @@ int movingCountCore(int threshold, int rows, int cols, int row,
     {
         visited[row * cols + col] = true;
 
+		//从左上角出发所以只要往左和往右走就行了
         count = 1 + movingCountCore(threshold, rows, cols,
-            row - 1, col, visited)
-            + movingCountCore(threshold, rows, cols,
-                row, col - 1, visited)
-            + movingCountCore(threshold, rows, cols,
                 row + 1, col, visited)
             + movingCountCore(threshold, rows, cols,
                 row, col + 1, visited);
