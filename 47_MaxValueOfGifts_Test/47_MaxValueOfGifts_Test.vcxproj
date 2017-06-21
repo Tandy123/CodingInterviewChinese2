@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3CD62C56-FF5B-4E56-B53C-CAE9807682EA}</ProjectGuid>
+    <ProjectGuid>{A1C9D52D-AB75-4FDD-963C-D714581B495D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>My30_MinInStack</RootNamespace>
+    <RootNamespace>My47_MaxValueOfGifts_Test</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -142,13 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MinInStack.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="StackWithMin.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClCompile Include="47_MaxValueOfGifts_Test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
