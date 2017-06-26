@@ -190,6 +190,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "47_MaxValueOfGifts_Test", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "48_LongestSubstringWithoutDup_Test", "48_LongestSubstringWithoutDup_Test\48_LongestSubstringWithoutDup_Test.vcxproj", "{8FD4087F-51E2-4CB9-ACE5-0276680E9B4F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "60_DicesProbability_Test", "60_DicesProbability_Test\60_DicesProbability_Test.vcxproj", "{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1122,6 +1124,16 @@ Global
 		{8FD4087F-51E2-4CB9-ACE5-0276680E9B4F}.Release|x64.Build.0 = Release|x64
 		{8FD4087F-51E2-4CB9-ACE5-0276680E9B4F}.Release|x86.ActiveCfg = Release|Win32
 		{8FD4087F-51E2-4CB9-ACE5-0276680E9B4F}.Release|x86.Build.0 = Release|Win32
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Debug|x64.ActiveCfg = Debug|x64
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Debug|x64.Build.0 = Debug|x64
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Debug|x86.ActiveCfg = Debug|Win32
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Debug|x86.Build.0 = Debug|Win32
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Release|Any CPU.ActiveCfg = Release|Win32
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Release|x64.ActiveCfg = Release|x64
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Release|x64.Build.0 = Release|x64
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Release|x86.ActiveCfg = Release|Win32
+		{79BD40E7-E149-44D4-BD77-3BECD7ED1AE4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

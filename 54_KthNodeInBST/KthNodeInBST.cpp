@@ -49,13 +49,43 @@ const BinaryTreeNode* KthNodeCore(const BinaryTreeNode* pRoot, unsigned int& k)
     return target;
 }
 
+const BinaryTreeNode* KthNodeCore2(const BinaryTreeNode* pRoot, unsigned int& k);
+
+const BinaryTreeNode* KthNode2(const BinaryTreeNode* pRoot, unsigned int k)
+{
+	if (pRoot == nullptr || k <= 0) {
+		return nullptr;
+	}
+	return KthNodeCore2(pRoot, k);
+}
+
+const BinaryTreeNode* KthNodeCore2(const BinaryTreeNode* pRoot, unsigned int& k)
+{
+	const BinaryTreeNode* target = nullptr;
+	if (pRoot->m_pLeft != nullptr) {
+		target = KthNodeCore2(pRoot->m_pLeft, k);
+	}
+	if (target == nullptr) {
+		if (k == 1) {
+			target = pRoot;
+		}
+		else {
+			--k;
+		}
+	}
+	if (target == nullptr && pRoot->m_pRight != nullptr) {
+		target = KthNodeCore2(pRoot->m_pRight, k);
+	}
+	return target;
+}
+
 // ====================²âÊÔ´úÂë====================
 void Test(const char* testName, const BinaryTreeNode* pRoot, unsigned int k, bool isNull, int expected)
 {
     if(testName != nullptr)
         printf("%s begins: ", testName);
 
-    const BinaryTreeNode* pTarget = KthNode(pRoot, k);
+    const BinaryTreeNode* pTarget = KthNode2(pRoot, k);
     if((isNull && pTarget == nullptr) || (!isNull && pTarget->m_nValue == expected))
         printf("Passed.\n");
     else

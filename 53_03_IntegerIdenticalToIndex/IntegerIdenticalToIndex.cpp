@@ -41,10 +41,32 @@ int GetNumberSameAsIndex(const int* numbers, int length)
     return -1;
 }
 
+int GetNumberSameAsIndex2(const int* numbers, int length)
+{
+	if (numbers == nullptr || length <= 0) {
+		return -1;
+	}
+	int left = 0;
+	int right = length - 1;
+	while (left <= right) {
+		int middle = (left + right) >> 1;
+		if (middle == numbers[middle]) {
+			return middle;
+		}
+		else if(numbers[middle] > middle){
+			right = middle - 1;
+		}
+		else {
+			left = middle + 1;
+		}
+	}
+	return -1;
+}
+
 // ====================²âÊÔ´úÂë====================
 void Test(const char* testName, int numbers[], int length, int expected)
 {
-    if(GetNumberSameAsIndex(numbers, length) == expected)
+    if(GetNumberSameAsIndex2(numbers, length) == expected)
         printf("%s passed.\n", testName);
     else
         printf("%s FAILED.\n", testName);
